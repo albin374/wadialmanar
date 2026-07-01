@@ -7,7 +7,7 @@
     background-position: center;
     display: flex;
     align-items: center;
-    padding: 120px 5% 0 5%; /* Added top padding to push content below navbar */
+    padding: 80px 5% 0 5%; /* Added top padding to push content below navbar */
 }
 
 .page-hero .hero-overlay {
@@ -40,7 +40,7 @@
 
 /* Projects Section */
 .projects-section {
-    padding: 5rem 5%;
+    padding: 3rem 5%;
     background-color: #fafafa;
 }
 
@@ -114,7 +114,7 @@
 /* Bottom CTA section */
 .bottom-cta {
     background-color: #3f3f3f;
-    padding: 5rem 5%;
+    padding: 3rem 5%;
     text-align: center;
     color: white;
 }
@@ -141,6 +141,23 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: #F97316;
+    color: white;
+    border: 2px solid #F97316;
+}
+
+.btn-primary:hover {
+    background-color: #ea580c;
+    border-color: #ea580c;
 }
 
 .btn-outline-dark {

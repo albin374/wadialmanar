@@ -52,35 +52,32 @@
             
             <div class="hero-stats fade-up delay-3">
                 <div class="glass-stat">
+                    <span class="stat-num counter" data-target="15">0</span>+
+                    <span class="stat-label">Years Of Experience</span>
+                </div>
+                <div class="glass-stat">
+                    <span class="stat-num counter" data-target="600">0</span>+
+                    <span class="stat-label">Success Projects</span>
+                </div>
+                <div class="glass-stat">
+                    <span class="stat-num counter" data-target="40">0</span>+
+                    <span class="stat-label">Team Member</span>
+                </div>
+                <div class="glass-stat">
                     <span class="stat-num counter" data-target="500">0</span>+
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="glass-stat">
-                    <span class="stat-num counter" data-target="150">0</span>+
-                    <span class="stat-label">Clients</span>
-                </div>
-                <div class="glass-stat">
-                    <span class="stat-num counter" data-target="10">0</span>+
-                    <span class="stat-label">Years Exp</span>
-                </div>
-                <div class="glass-stat">
-                    <span class="stat-num counter" data-target="25">0</span>+
-                    <span class="stat-label">Experts</span>
+                    <span class="stat-label">Happy Customer</span>
                 </div>
             </div>
         </div>
 
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="line"></div>
-        </div>
+
     </section>
 
     <!-- About Us Section -->
     <section class="about-premium padding-y">
         <div class="container split-layout">
             <div class="split-left parallax-img-container">
-                <img src="media/about_img.png" alt="Engineers working" class="parallax-img">
+                <img src="media/Skilled trades in action collage.png" alt="Engineers working" class="parallax-img">
             </div>
             <div class="split-right">
                 <span class="subtitle accent-text">About Us</span>
@@ -272,6 +269,17 @@
                     </div>
                 </div>
                 <div class="masonry-item group">
+                    <img src="media/Twilight modern plaza with sleek architecture.png" alt="Electrical Project">
+                    <div class="masonry-overlay">
+                        <div class="m-content">
+                            <span class="m-cat">Electrical Works</span>
+                            <h3>Commercial Complex</h3>
+                            <span class="m-loc">Sharjah</span>
+                            <a href="#" class="m-btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item group">
                     <img src="media/Contemporary luxury villa with waterfront views.png" alt="Luxury Villa">
                     <div class="masonry-overlay">
                         <div class="m-content">
@@ -282,7 +290,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="masonry-item wide group">
+                <div class="masonry-item tall group">
+                    <img src="media/luxury_penthouse.png" alt="Luxury Penthouse Renovation">
+                    <div class="masonry-overlay">
+                        <div class="m-content">
+                            <span class="m-cat">Fit Out Works</span>
+                            <h3>Penthouse Renovation</h3>
+                            <span class="m-loc">Dubai Marina</span>
+                            <a href="#" class="m-btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item tall group">
                     <img src="media/Modern fine-dining with city views.png" alt="Restaurant Interior">
                     <div class="masonry-overlay">
                         <div class="m-content">
@@ -293,13 +312,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="masonry-item group">
-                    <img src="media/Twilight modern plaza with sleek architecture.png" alt="Electrical Project">
+
+
+                <div class="masonry-item wide group">
+                    <img src="media/data_center.png" alt="Data Center ELV">
                     <div class="masonry-overlay">
                         <div class="m-content">
-                            <span class="m-cat">Electrical Works</span>
-                            <h3>Commercial Complex</h3>
-                            <span class="m-loc">Sharjah</span>
+                            <span class="m-cat">ELV Systems</span>
+                            <h3>Tech Data Center</h3>
+                            <span class="m-loc">Abu Dhabi</span>
                             <a href="#" class="m-btn">View Project</a>
                         </div>
                     </div>
@@ -576,6 +597,19 @@
                 });
             }
             
+            // Sticky Navbar
+            const navbar = document.querySelector('.premium-nav');
+            const heroSection = document.querySelector('.hero-premium');
+            if (navbar && heroSection) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > heroSection.offsetHeight - 50) {
+                        navbar.classList.add('nav-scrolled');
+                    } else {
+                        navbar.classList.remove('nav-scrolled');
+                    }
+                });
+            }
+
             // Hamburger Menu
             const hamburger = document.querySelector('.hamburger');
             const navLinks = document.querySelector('.nav-links');
