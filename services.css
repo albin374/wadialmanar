@@ -1,0 +1,170 @@
+/* Projects Page Specific Styles */
+.page-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 120px 5% 0 5%; /* Added top padding to push content below navbar */
+}
+
+.page-hero .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, rgba(31, 41, 55, 0.9) 0%, rgba(31, 41, 55, 0.4) 100%);
+    z-index: 1;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.page-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.page-hero-content p {
+    font-size: 1.1rem;
+    color: #e5e7eb;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 5rem 5%;
+    background-color: #fafafa;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-card .card-body {
+    padding: 2rem;
+}
+
+.project-card .icon {
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.project-card p {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.project-card .learn-more {
+    color: #F97316;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.project-card .learn-more:hover {
+    text-decoration: underline;
+}
+
+/* Bottom CTA section */
+.bottom-cta {
+    background-color: #3f3f3f;
+    padding: 5rem 5%;
+    text-align: center;
+    color: white;
+}
+
+.bottom-cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.bottom-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.bottom-cta p {
+    font-size: 1.1rem;
+    color: #d1d5db;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.cta-buttons-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-outline-dark {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #555;
+    color: white;
+    background: transparent;
+}
+
+.btn-outline-dark:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+    .page-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .cta-buttons-row {
+        flex-direction: column;
+    }
+}

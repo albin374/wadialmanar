@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wadi Al Manar | Premium Technical Services</title>
+    <meta name="description" content="Award-winning premium technical services in Dubai. Painting, Electrical, ELV, Fit Out, Carpentry, Flooring, AC, Gypsum, and General Maintenance.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="smooth-scroll">
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <header class="navbar premium-nav">
+        <div class="logo">
+            <img src="media/logo2 (2).png" alt="Wadi Al Manar Logo" height="70">
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <a href="contact.html" class="btn-magnetic btn-accent">Get Free Quote</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-premium">
+        <div class="hero-bg-slider">
+            <div class="slide active" style="background-image: url('media/a_professional_high_quality_photograph_of_a_modern_commercial_skyline_in_the.png');"></div>
+            <div class="slide" style="background-image: url('media/bg_electrical_1782716326213.png');"></div>
+            <div class="slide" style="background-image: url('media/bg_painting_1782716314003.png');"></div>
+            <div class="hero-overlay-dark"></div>
+        </div>
+        
+        <div class="hero-content-wrapper">
+            <h1 class="reveal-text">Engineering Better Spaces<br>with Precision & Excellence</h1>
+            <p class="fade-up delay-1">Elevating Dubai's infrastructure through world-class technical services, MEP, fit-outs, and maintenance with uncompromised quality.</p>
+            
+            <div class="hero-actions fade-up delay-2">
+                <a href="contact.html" class="btn-solid-accent">Get Free Quote</a>
+                <a href="#services" class="btn-outline-white">Explore Services</a>
+            </div>
+            
+            <div class="hero-stats fade-up delay-3">
+                <div class="glass-stat">
+                    <span class="stat-num counter" data-target="500">0</span>+
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="glass-stat">
+                    <span class="stat-num counter" data-target="150">0</span>+
+                    <span class="stat-label">Clients</span>
+                </div>
+                <div class="glass-stat">
+                    <span class="stat-num counter" data-target="10">0</span>+
+                    <span class="stat-label">Years Exp</span>
+                </div>
+                <div class="glass-stat">
+                    <span class="stat-num counter" data-target="25">0</span>+
+                    <span class="stat-label">Experts</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-premium padding-y">
+        <div class="container split-layout">
+            <div class="split-left parallax-img-container">
+                <img src="media/about_img.png" alt="Engineers working" class="parallax-img">
+            </div>
+            <div class="split-right">
+                <span class="subtitle accent-text">About Us</span>
+                <h2>Your Trusted Partner for All Technical Services</h2>
+                <p>We offer a diverse range of services to fulfill all your maintenance and construction needs, including electrical, plumbing, painting, carpentry, AC, fit-out works, and general maintenance, ensuring quality and reliability.</p>
+                <div style="margin-top: 2rem; margin-bottom: 2rem;">
+                    <h3 style="color: #F97316; margin-bottom: 1rem; font-size: 1.1rem; text-transform: uppercase;">We Are Available 24/7 To Meet Your Needs.</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px; font-weight: 500; color: var(--text-dark);"><span style="color: #F97316; font-weight: bold;">✓</span> Avoiding Common Design Pitfalls</li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px; font-weight: 500; color: var(--text-dark);"><span style="color: #F97316; font-weight: bold;">✓</span> Optimizing Your Startup’s Design</li>
+                        <li style="display: flex; align-items: center; gap: 10px; font-weight: 500; color: var(--text-dark);"><span style="color: #F97316; font-weight: bold;">✓</span> Enhancing Font Clarity and Readability</li>
+                    </ul>
+                </div>
+                <a href="about.html" class="btn-solid-dark mt-2">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-premium padding-y bg-neutral">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle accent-text">Our Expertise</span>
+                <h2>Premium Technical Services</h2>
+            </div>
+            
+            <div class="services-grid-large">
+                <!-- Service Card 1 -->
+                <div class="service-card-luxury group">
+                    <img src="media/bg_painting_1782716314003.png" alt="Painting Works">
+                    <div class="scl-overlay"></div>
+                    <div class="scl-content">
+
+                        <h3>Painting Works</h3>
+                        <p>High-end interior and exterior painting with flawless finishes.</p>
+                        <a href="#" class="scl-btn">Read More <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="service-card-luxury group">
+                    <img src="media/bg_electrical_1782716326213.png" alt="Electrical Works">
+                    <div class="scl-overlay"></div>
+                    <div class="scl-content">
+
+                        <h3>Electrical Works</h3>
+                        <p>Safe, compliant, and modern electrical installations and repairs.</p>
+                        <a href="#" class="scl-btn">Read More <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="service-card-luxury group">
+                    <img src="media/bg_elv_1782716342672.png" alt="ELV Works">
+                    <div class="scl-overlay"></div>
+                    <div class="scl-content">
+
+                        <h3>ELV Works</h3>
+                        <p>Advanced Extra Low Voltage systems for modern smart buildings.</p>
+                        <a href="#" class="scl-btn">Read More <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="service-card-luxury group">
+                    <img src="media/bg_fitout_1782716432427.png" alt="Fit Out Works">
+                    <div class="scl-overlay"></div>
+                    <div class="scl-content">
+
+                        <h3>Fit Out Works</h3>
+                        <p>Luxurious commercial and residential interior fit-outs.</p>
+                        <a href="#" class="scl-btn">Read More <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="service-card-luxury group">
+                    <img src="media/bg_carpentry_1782716444867.png" alt="Carpentry Works">
+                    <div class="scl-overlay"></div>
+                    <div class="scl-content">
+
+                        <h3>Carpentry Works</h3>
+                        <p>Custom woodwork and premium carpentry solutions.</p>
+                        <a href="#" class="scl-btn">Read More <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="service-card-luxury group">
+                    <img src="media/bg_flooring_1782716357761.png" alt="Flooring Works">
+                    <div class="scl-overlay"></div>
+                    <div class="scl-content">
+
+                        <h3>Flooring Works</h3>
+                        <p>Elegant flooring installation from marble to hardwood.</p>
+                        <a href="#" class="scl-btn">Read More <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <!-- Service Card 7 -->
+                <div class="service-card-luxury group">
+                    <img src="media/bg_ac_1782716370637.png" alt="AC Works">
+                    <div class="scl-overlay"></div>
+                    <div class="scl-content">
+
+                        <h3>AC Works</h3>
+                        <p>Efficient HVAC installations and premium maintenance services.</p>
+                        <a href="#" class="scl-btn">Read More <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <!-- Service Card 8 -->
+                <div class="service-card-luxury group">
+                    <img src="media/bg_gypsum_1782716384460.png" alt="Gypsum Works">
+                    <div class="scl-overlay"></div>
+                    <div class="scl-content">
+
+                        <h3>Gypsum Works</h3>
+                        <p>Intricate gypsum ceiling and partition installations.</p>
+                        <a href="#" class="scl-btn">Read More <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <!-- Service Card 9 -->
+                <div class="service-card-luxury group">
+                    <img src="media/bg_maintenance_1782716398847.png" alt="General Maintenance">
+                    <div class="scl-overlay"></div>
+                    <div class="scl-content">
+
+                        <h3>General Maintenance</h3>
+                        <p>Comprehensive facility and building maintenance solutions.</p>
+                        <a href="#" class="scl-btn">Read More <span class="arrow">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us-premium padding-y">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle accent-text">Why Choose Us</span>
+                <h2>The Wadi Al Manar Advantage</h2>
+            </div>
+            <div class="wcu-grid">
+                <div class="wcu-card">
+                    <div class="wcu-bg" style="background-image: url('media/step_working_1782718338871.png');"></div>
+                    <div class="wcu-glass">
+                        <h4>Certified Professionals</h4>
+                        <p>Our team comprises highly qualified engineers and technicians.</p>
+                    </div>
+                </div>
+                <div class="wcu-card">
+                    <div class="wcu-bg" style="background-image: url('media/step_visit_1782718280993.png');"></div>
+                    <div class="wcu-glass">
+                        <h4>Modern Equipment</h4>
+                        <p>Utilizing state-of-the-art tools for precision and efficiency.</p>
+                    </div>
+                </div>
+                <div class="wcu-card">
+                    <div class="wcu-bg" style="background-image: url('media/step_sketch_1782718307875.png');"></div>
+                    <div class="wcu-glass">
+                        <h4>Premium Materials</h4>
+                        <p>We source only the highest quality materials for durability.</p>
+                    </div>
+                </div>
+                <div class="wcu-card">
+                    <div class="wcu-bg" style="background-image: url('media/step_planning_1782718293991.png');"></div>
+                    <div class="wcu-glass">
+                        <h4>Quality Assurance</h4>
+                        <p>Strict quality control processes ensuring flawless execution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects (Masonry) -->
+    <section class="projects-premium padding-y bg-dark">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle accent-text">Our Portfolio</span>
+                <h2 class="text-white">Featured Projects</h2>
+            </div>
+            
+            <div class="masonry-gallery">
+                <div class="masonry-item tall group">
+                    <img src="media/bg_fitout_1782716432427.png" alt="Commercial Building">
+                    <div class="masonry-overlay">
+                        <div class="m-content">
+                            <span class="m-cat">Fit Out Works</span>
+                            <h3>Corporate Headquarters</h3>
+                            <span class="m-loc">Dubai</span>
+                            <a href="#" class="m-btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item group">
+                    <img src="media/bg_gypsum_1782716384460.png" alt="Luxury Villa">
+                    <div class="masonry-overlay">
+                        <div class="m-content">
+                            <span class="m-cat">Complete Renovation</span>
+                            <h3>Luxury Villa</h3>
+                            <span class="m-loc">Palm Jumeirah</span>
+                            <a href="#" class="m-btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item wide group">
+                    <img src="media/bg_ac_1782716370637.png" alt="Restaurant Interior">
+                    <div class="masonry-overlay">
+                        <div class="m-content">
+                            <span class="m-cat">Interior & ELV</span>
+                            <h3>Fine Dining Restaurant</h3>
+                            <span class="m-loc">Downtown Dubai</span>
+                            <a href="#" class="m-btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item group">
+                    <img src="media/bg_elv_1782716342672.png" alt="Electrical Project">
+                    <div class="masonry-overlay">
+                        <div class="m-content">
+                            <span class="m-cat">Electrical Works</span>
+                            <h3>Commercial Complex</h3>
+                            <span class="m-loc">Sharjah</span>
+                            <a href="#" class="m-btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="process-premium padding-y">
+        <div class="container text-center">
+            <div class="section-header">
+                <span class="subtitle accent-text">Our Process</span>
+                <h2>How We Work</h2>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="p-num">01</div>
+                    <h4>Consultation</h4>
+                    <p>Understanding your requirements and vision.</p>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step">
+                    <div class="p-num">02</div>
+                    <h4>Planning</h4>
+                    <p>Detailed architectural and technical planning.</p>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step">
+                    <div class="p-num">03</div>
+                    <h4>Execution</h4>
+                    <p>Precision implementation by expert teams.</p>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step">
+                    <div class="p-num">04</div>
+                    <h4>Delivery</h4>
+                    <p>Final inspection and handover.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider -->
+    <section class="testimonials-premium padding-y bg-neutral">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle accent-text">Testimonials</span>
+                <h2>What Our Clients Say</h2>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card glassmorphism">
+                    <div class="quote-mark">"</div>
+                    <p class="t-text">Wadi Al Manar transformed our commercial space completely. Their attention to detail in the MEP and fit-out works was phenomenal. Highly recommended for premium projects.</p>
+                    <div class="t-author">
+                        <img src="media/logo.png" alt="Client">
+                        <div>
+                            <h5>Ahmed Al Maktoum</h5>
+                            <span>Property Developer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glassmorphism">
+                    <div class="quote-mark">"</div>
+                    <p class="t-text">The level of professionalism displayed by their electrical and HVAC teams was outstanding. Delivered exactly on time with zero compromises on quality.</p>
+                    <div class="t-author">
+                        <img src="media/logo2 (2).png" alt="Client">
+                        <div>
+                            <h5>Sarah Jenkins</h5>
+                            <span>Operations Manager</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq-premium padding-y">
+        <div class="container split-layout">
+            <div class="split-left">
+                <span class="subtitle accent-text">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+                <p class="mt-2 text-dark-gray">Everything you need to know about our services, process, and technical capabilities.</p>
+            </div>
+            <div class="split-right">
+                <div class="accordion">
+                    <div class="accordion-item active">
+                        <div class="accordion-header">What areas do you serve? <span class="icon">+</span></div>
+                        <div class="accordion-content">We primarily serve Dubai, offering our premium technical services for significant projects across the region.</div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Are your engineers certified? <span class="icon">+</span></div>
+                        <div class="accordion-content">Yes, all our engineers and technicians hold relevant certifications and undergo continuous training to meet international standards.</div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Do you handle commercial fit-outs? <span class="icon">+</span></div>
+                        <div class="accordion-content">Absolutely. We specialize in luxury commercial fit-outs, including offices, restaurants, and retail spaces.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-premium">
+        <div class="cta-bg" style="background-image: url('media/a_professional_high_quality_photograph_of_a_modern_commercial_skyline_in_the.png');"></div>
+        <div class="cta-overlay-gradient"></div>
+        <div class="container cta-content-wrapper text-center">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Partner with Wadi Al Manar for engineering excellence and premium finishing.</p>
+            <div class="hero-actions justify-center mt-2">
+                <a href="contact.html" class="btn-solid-accent">Request a Quote</a>
+                <a href="contact.html" class="btn-outline-white">Contact Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Super Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="footer-grid" style="grid-template-columns: 2fr 1fr 1fr 1.5fr;">
+                <div class="f-brand">
+                    <img src="media/logo2 (2).png" alt="Wadi Al Manar Logo" class="f-logo" style="height: 70px;">
+                    <p>Engineering Better Spaces with Precision & Excellence. Premium technical services in Dubai.</p>
+                </div>
+                <div class="f-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="f-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Fit Out Works</a></li>
+                        <li><a href="#">MEP Services</a></li>
+                        <li><a href="#">General Maintenance</a></li>
+                        <li><a href="#">Civil Works</a></li>
+                    </ul>
+                </div>
+                <div class="f-newsletter">
+                    <h4 style="color: #F97316; margin-bottom: 1.5rem; font-size: 1.2rem;">Newsletter</h4>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Subscribe to get the latest news and updates.</p>
+                    <form style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                        <input type="email" placeholder="Your Email" style="padding: 0.8rem; flex: 1; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; border-radius: 4px;">
+                        <button type="button" style="background: #F97316; color: white; border: none; padding: 0 1.5rem; border-radius: 4px; cursor: pointer; font-weight: 600;">Subscribe</button>
+                    </form>
+                    <div class="f-contact-info" style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                        <p style="margin-bottom: 0.5rem;">📍 Bur Dubai - Al Fahidi - Dubai</p>
+                        <p style="margin-bottom: 0.5rem;">📞 +971 52 795 0408</p>
+                        <p>✉️ info@wadialmanar.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Wadi Al Manar Technical Services LLC. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // GSAP Animations and Interactions
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Hero Animations
+            gsap.from(".reveal-text", { y: 100, opacity: 0, duration: 1, ease: "power4.out" });
+            gsap.from(".fade-up", { y: 50, opacity: 0, duration: 1, stagger: 0.2, ease: "power3.out", delay: 0.3 });
+            
+            // Image Parallax
+            gsap.utils.toArray('.parallax-img').forEach(img => {
+                gsap.to(img, {
+                    yPercent: 20,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: img.parentElement,
+                        start: "top bottom",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
+            });
+
+            // Counters
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                ScrollTrigger.create({
+                    trigger: counter,
+                    start: "top 80%",
+                    onEnter: () => {
+                        let target = +counter.getAttribute('data-target');
+                        gsap.to(counter, {
+                            innerHTML: target,
+                            duration: 2,
+                            snap: { innerHTML: 1 },
+                            ease: "power2.out"
+                        });
+                    },
+                    once: true
+                });
+            });
+
+            // Accordion
+            const accordions = document.querySelectorAll('.accordion-header');
+            accordions.forEach(acc => {
+                acc.addEventListener('click', function() {
+                    this.parentElement.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    if(content.style.display === "block"){
+                        content.style.display = "none";
+                        this.querySelector('.icon').innerText = "+";
+                    } else {
+                        content.style.display = "block";
+                        this.querySelector('.icon').innerText = "-";
+                    }
+                });
+            });
+
+            // Hero Slider Rotation
+            let slides = document.querySelectorAll('.hero-bg-slider .slide');
+            let currentSlide = 0;
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 5000);
+            
+            // Custom Cursor (Optional)
+            const cursor = document.querySelector('.cursor');
+            const follower = document.querySelector('.cursor-follower');
+            
+            if(cursor && follower) {
+                document.addEventListener('mousemove', (e) => {
+                    gsap.to(cursor, {x: e.clientX, y: e.clientY, duration: 0});
+                    gsap.to(follower, {x: e.clientX, y: e.clientY, duration: 0.15});
+                });
+            }
+            
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

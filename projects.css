@@ -1,0 +1,417 @@
+/* Projects Page CSS */
+:root {
+    --gold: #C8A56A;
+    --dark-charcoal: #121212;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray-light: #f5f5f5;
+    --gray-dark: #333333;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--dark-charcoal);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Typography Overrides for Projects Page */
+.gold-accent-text {
+    color: var(--gold);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Buttons */
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--white);
+    border: 2px solid var(--gold);
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-gold:hover {
+    background-color: transparent;
+    color: var(--gold);
+}
+
+/* Hero Section */
+.projects-hero {
+    position: relative;
+    height: 90vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    overflow: hidden;
+}
+
+.hero-bg-collage {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    z-index: 0;
+}
+
+.collage-item {
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay-dark {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+.projects-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin-top: 80px;
+}
+
+.projects-hero-content h1 {
+    font-size: 4.5rem;
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.projects-hero-content p {
+    font-size: 1.25rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Project Statistics */
+.project-stats {
+    background-color: var(--dark-charcoal);
+    padding: 4rem 5%;
+    color: var(--white);
+    border-top: 5px solid var(--gold);
+}
+
+.stat-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.stat-box {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
+.stat-num {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.gold-plus {
+    color: var(--gold);
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.stat-box p {
+    color: #a0a0a0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 6rem 5%;
+    background-color: var(--white);
+}
+
+.section-title h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--black);
+}
+
+/* Filter Pills */
+.filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    color: var(--gray-dark);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+}
+
+/* Masonry Grid */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.masonry-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.masonry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.masonry-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.masonry-item.medium {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.masonry-item.square {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.masonry-item.landscape {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.item-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+.masonry-item:hover img {
+    transform: scale(1.08);
+}
+
+.masonry-item:hover .item-overlay {
+    opacity: 1;
+}
+
+.service-badge {
+    background-color: var(--gold);
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.item-content h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-content .location-date {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.view-project-btn {
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Alternating Services */
+.alternating-services {
+    padding: 6rem 5%;
+    background-color: var(--gray-light);
+}
+
+.alt-row {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 6rem auto;
+    gap: 4rem;
+}
+
+.alt-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.alt-row:last-child {
+    margin-bottom: 0;
+}
+
+.alt-img-col {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.alt-img-col img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.alt-text-col {
+    flex: 1;
+}
+
+.alt-text-col h2 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.check-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--gray-dark);
+}
+
+.check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* CTA Section */
+.premium-cta {
+    position: relative;
+    padding: 8rem 5%;
+    background-color: var(--black);
+    background-image: url('media/a_high_quality_professional_wide_angle_photograph_of_a_modern_sleek_industrial.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.premium-cta-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(18, 18, 18, 0.85);
+}
+
+.premium-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.premium-cta-content h2 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.premium-cta-content p {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .masonry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .alt-row, .alt-row.reverse {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .masonry-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+    }
+    
+    .masonry-item.large, .masonry-item.medium, .masonry-item.landscape {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
