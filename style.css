@@ -433,7 +433,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .footer-premium { background: var(--secondary); color: var(--primary); padding: 5rem 0 2rem; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; margin-bottom: 4rem; }
 .f-brand p { color: rgba(255,255,255,0.7); margin-top: 1.5rem; }
 .f-links h4, .f-contact h4 { color: var(--primary); margin-bottom: 1.5rem; font-size: 1.2rem; }
 .f-links ul { list-style: none; }
@@ -460,9 +460,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-    .hero-content-wrapper h1 { font-size: 3rem; }
-    .hero-stats { flex-wrap: wrap; }
-    .glass-stat { flex: 1 1 45%; }
+    .hero-content-wrapper { margin-top: 10rem; max-width: 100vw; overflow-x: hidden; padding-bottom: 2rem; }
+    .hero-content-wrapper h1 { font-size: 2.5rem; }
+    .hero-stats { 
+        flex-wrap: nowrap; 
+        width: max-content;
+        margin-top: 2rem;
+        animation: marqueeMobile 15s linear infinite;
+    }
+    .glass-stat { flex: 0 0 160px; }
+    @keyframes marqueeMobile {
+        0% { transform: translateX(100vw) !important; }
+        100% { transform: translateX(-1000px) !important; }
+    }
     .services-grid-large { grid-template-columns: 1fr; }
     .masonry-gallery { grid-template-columns: 1fr; }
     .masonry-item { grid-column: span 1; }
