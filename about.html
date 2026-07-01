@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Us | Wadi Al Manar Premium Technical Services</title>
+    <meta name="description" content="Discover Wadi Al Manar, a leading UAE-based technical services company specializing in premium maintenance, MEP, and fit-out works.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: { preflight: false },
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#111111',
+                            orange: '#F97316',
+                            grey: '#F5F5F5',
+                            dark: '#2C2C2C'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <style>
+        /* Custom styles for About page */
+        .glass-panel { background: rgba(255,255,255,0.05); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.1); }
+        .glass-panel-dark { background: rgba(17,17,17,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }
+        .text-gradient { background: linear-gradient(to right, #ffffff, #aaaaaa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hover-orange-glow:hover { box-shadow: 0 0 30px rgba(249,115,22,0.3); border-color: rgba(249,115,22,0.5); }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        body { font-family: 'Inter', sans-serif; color: #2C2C2C; background-color: #FFFFFF; margin: 0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; margin: 0; }
+        
+        /* Animations */
+        .gsap-reveal { opacity: 0; transform: translateY(40px); }
+        .gsap-scale { opacity: 0; transform: scale(0.9); }
+        
+        .marquee-container { overflow: hidden; white-space: nowrap; width: 100%; position: relative; }
+        .marquee-content { display: inline-block; animation: marquee 20s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <header class="navbar premium-nav">
+        <div class="logo">
+            <img src="media/logo2 (2).png" alt="Wadi Al Manar Logo" height="70">
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <a href="contact.html" class="btn-magnetic btn-accent">Get Free Quote</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-brand-black">
+        <div class="absolute inset-0 z-0">
+            <img src="media/Modern corporate lobby with city view.png" class="w-full h-full object-cover opacity-40 parallax-bg" alt="Hero Background">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-black/80 via-brand-black/50 to-brand-black"></div>
+        </div>
+        
+        <!-- Floating Blueprint Lines -->
+        <div class="absolute inset-0 z-0 opacity-10" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 49px, #F97316 50px), repeating-linear-gradient(90deg, transparent, transparent 49px, #F97316 50px); background-size: 50px 50px;"></div>
+
+        <div class="relative z-10 container mx-auto px-6 text-center mt-24 max-w-5xl">
+            <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight gsap-hero">Building Excellence Through<br><span class="text-brand-orange">Innovation & Technical Expertise</span></h1>
+            <p class="text-lg md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed gsap-hero delay-100">Delivering premium technical services across the UAE with unmatched quality, craftsmanship, and reliability.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center gsap-hero delay-200">
+                <a href="services.html" class="px-8 py-4 bg-brand-orange text-white rounded font-semibold tracking-wide hover:bg-orange-600 transition-colors shadow-lg shadow-brand-orange/30">Explore Our Services</a>
+                <a href="contact.html" class="px-8 py-4 border-2 border-white text-white rounded font-semibold tracking-wide hover:bg-white hover:text-brand-black transition-colors">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gsap-hero delay-300">
+            <span class="text-white/50 text-sm tracking-widest uppercase mb-2">Scroll to discover</span>
+            <div class="w-[1px] h-16 bg-white/20 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1/2 bg-brand-orange animate-[scroll_2s_ease-in-out_infinite]"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="py-32 bg-white relative">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col lg:flex-row gap-20 items-center">
+                <div class="w-full lg:w-1/2 relative gsap-reveal">
+                    <div class="absolute -inset-4 border border-brand-orange/30 rounded-xl transform translate-x-4 translate-y-4"></div>
+                    <img src="media/about_img.png" alt="Company Story" class="w-full rounded-xl shadow-2xl relative z-10 object-cover h-[600px]">
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <span class="text-brand-orange font-display tracking-widest uppercase text-sm font-semibold mb-4 block gsap-reveal">Who We Are</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-brand-black mb-8 leading-tight gsap-reveal">Crafting the Future of UAE's Infrastructure</h2>
+                    
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed mb-12 gsap-reveal">
+                        <p>Wadi Al Manar Technical Services LLC is a premier technical services company dedicated to transforming spaces through world-class engineering, precise execution, and innovative solutions.</p>
+                        <p>Our journey began with a simple commitment: to elevate the standard of technical maintenance and fit-out works across Dubai and the UAE. Today, we stand as a trusted partner for luxury commercial buildings, residential villas, and vast industrial complexes.</p>
+                    </div>
+                    
+                    <!-- Vertical Timeline -->
+                    <div class="relative pl-8 border-l-2 border-gray-100 space-y-8 gsap-reveal">
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-brand-orange border-4 border-white shadow"></div>
+                            <h4 class="font-display font-bold text-xl text-brand-black">Our Journey</h4>
+                            <p class="text-gray-500 mt-2">Over a decade of consistent growth and engineering excellence.</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-brand-black border-4 border-white shadow"></div>
+                            <h4 class="font-display font-bold text-xl text-brand-black">Our Commitment</h4>
+                            <p class="text-gray-500 mt-2">Unwavering dedication to safety, precision, and client success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-32 bg-brand-grey relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
+                <!-- Mission -->
+                <div class="bg-white p-16 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-500 group border border-gray-100 gsap-scale">
+                    <div class="w-20 h-20 rounded-full bg-brand-orange/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-4xl font-display font-bold text-brand-black mb-6">Our Mission</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">To deliver exceptional technical services with an uncompromising commitment to quality, safety, innovation, and absolute customer satisfaction across every project we undertake.</p>
+                </div>
+                <!-- Vision -->
+                <div class="bg-brand-black p-16 rounded-2xl shadow-xl hover-orange-glow transition-all duration-500 group gsap-scale delay-100">
+                    <div class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h3 class="text-4xl font-display font-bold text-white mb-6">Our Vision</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">To become the UAE's most trusted and innovative technical service provider, setting new benchmarks in engineering excellence and sustainable infrastructure development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-20 gsap-reveal">
+                <span class="text-brand-orange font-display tracking-widest uppercase text-sm font-semibold mb-4 block">Our Principles</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-brand-black">Core Values</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Value 1 -->
+                <div class="p-8 rounded-xl bg-gray-50 border border-gray-100 hover-orange-glow transition-all duration-300 text-center group gsap-reveal">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-orange transition-colors">
+                        <span class="text-2xl group-hover:text-white transition-colors">⭐</span>
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-brand-black mb-2">Quality</h4>
+                </div>
+                <!-- Value 2 -->
+                <div class="p-8 rounded-xl bg-gray-50 border border-gray-100 hover-orange-glow transition-all duration-300 text-center group gsap-reveal">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-orange transition-colors">
+                        <span class="text-2xl group-hover:text-white transition-colors">🤝</span>
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-brand-black mb-2">Integrity</h4>
+                </div>
+                <!-- Value 3 -->
+                <div class="p-8 rounded-xl bg-gray-50 border border-gray-100 hover-orange-glow transition-all duration-300 text-center group gsap-reveal">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-orange transition-colors">
+                        <span class="text-2xl group-hover:text-white transition-colors">💡</span>
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-brand-black mb-2">Innovation</h4>
+                </div>
+                <!-- Value 4 -->
+                <div class="p-8 rounded-xl bg-gray-50 border border-gray-100 hover-orange-glow transition-all duration-300 text-center group gsap-reveal">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-orange transition-colors">
+                        <span class="text-2xl group-hover:text-white transition-colors">🛡️</span>
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-brand-black mb-2">Safety</h4>
+                </div>
+                <!-- Value 5 -->
+                <div class="p-8 rounded-xl bg-gray-50 border border-gray-100 hover-orange-glow transition-all duration-300 text-center group gsap-reveal">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-orange transition-colors">
+                        <span class="text-2xl group-hover:text-white transition-colors">👥</span>
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-brand-black mb-2">Teamwork</h4>
+                </div>
+                <!-- Value 6 -->
+                <div class="p-8 rounded-xl bg-gray-50 border border-gray-100 hover-orange-glow transition-all duration-300 text-center group gsap-reveal">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-orange transition-colors">
+                        <span class="text-2xl group-hover:text-white transition-colors">❤️</span>
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-brand-black mb-2">Customer Satisfaction</h4>
+                </div>
+                <!-- Value 7 -->
+                <div class="p-8 rounded-xl bg-gray-50 border border-gray-100 hover-orange-glow transition-all duration-300 text-center group gsap-reveal">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-orange transition-colors">
+                        <span class="text-2xl group-hover:text-white transition-colors">👔</span>
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-brand-black mb-2">Professionalism</h4>
+                </div>
+                <!-- Value 8 -->
+                <div class="p-8 rounded-xl bg-gray-50 border border-gray-100 hover-orange-glow transition-all duration-300 text-center group gsap-reveal">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-orange transition-colors">
+                        <span class="text-2xl group-hover:text-white transition-colors">⚡</span>
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-brand-black mb-2">Reliability</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-32 bg-brand-black text-white overflow-hidden">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col lg:flex-row gap-20 items-center">
+                <div class="w-full lg:w-1/2 gsap-reveal">
+                    <img src="media/bg_electrical_1782716326213.png" alt="Why Choose Us" class="w-full rounded-xl shadow-2xl object-cover h-[700px]">
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <span class="text-brand-orange font-display tracking-widest uppercase text-sm font-semibold mb-4 block gsap-reveal">The Wadi Al Manar Advantage</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold mb-10 leading-tight gsap-reveal">Why Choose Wadi Al Manar</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="flex items-center gap-4 gsap-reveal">
+                            <div class="w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center flex-shrink-0 text-white font-bold">✓</div>
+                            <span class="text-lg font-medium">Skilled Professionals</span>
+                        </div>
+                        <div class="flex items-center gap-4 gsap-reveal">
+                            <div class="w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center flex-shrink-0 text-white font-bold">✓</div>
+                            <span class="text-lg font-medium">Certified Team</span>
+                        </div>
+                        <div class="flex items-center gap-4 gsap-reveal">
+                            <div class="w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center flex-shrink-0 text-white font-bold">✓</div>
+                            <span class="text-lg font-medium">Premium Materials</span>
+                        </div>
+                        <div class="flex items-center gap-4 gsap-reveal">
+                            <div class="w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center flex-shrink-0 text-white font-bold">✓</div>
+                            <span class="text-lg font-medium">On-Time Delivery</span>
+                        </div>
+                        <div class="flex items-center gap-4 gsap-reveal">
+                            <div class="w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center flex-shrink-0 text-white font-bold">✓</div>
+                            <span class="text-lg font-medium">Affordable Solutions</span>
+                        </div>
+                        <div class="flex items-center gap-4 gsap-reveal">
+                            <div class="w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center flex-shrink-0 text-white font-bold">✓</div>
+                            <span class="text-lg font-medium">24/7 Support</span>
+                        </div>
+                        <div class="flex items-center gap-4 gsap-reveal">
+                            <div class="w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center flex-shrink-0 text-white font-bold">✓</div>
+                            <span class="text-lg font-medium">Advanced Equipment</span>
+                        </div>
+                        <div class="flex items-center gap-4 gsap-reveal">
+                            <div class="w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center flex-shrink-0 text-white font-bold">✓</div>
+                            <span class="text-lg font-medium">Customized Services</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="py-24 relative bg-brand-orange overflow-hidden">
+        <div class="absolute inset-0 bg-[url('media/bg_fitout_1782716432427.png')] bg-cover bg-center mix-blend-overlay opacity-20 parallax-bg"></div>
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center text-white">
+                <div class="gsap-scale">
+                    <div class="text-5xl md:text-6xl font-display font-bold mb-2">500<span class="text-3xl">+</span></div>
+                    <div class="text-sm font-medium uppercase tracking-wider">Completed Projects</div>
+                </div>
+                <div class="gsap-scale delay-100">
+                    <div class="text-5xl md:text-6xl font-display font-bold mb-2">150<span class="text-3xl">+</span></div>
+                    <div class="text-sm font-medium uppercase tracking-wider">Happy Clients</div>
+                </div>
+                <div class="gsap-scale delay-200">
+                    <div class="text-5xl md:text-6xl font-display font-bold mb-2">25<span class="text-3xl">+</span></div>
+                    <div class="text-sm font-medium uppercase tracking-wider">Technical Experts</div>
+                </div>
+                <div class="gsap-scale delay-300">
+                    <div class="text-5xl md:text-6xl font-display font-bold mb-2">10<span class="text-3xl">+</span></div>
+                    <div class="text-sm font-medium uppercase tracking-wider">Years Experience</div>
+                </div>
+                <div class="gsap-scale delay-400">
+                    <div class="text-5xl md:text-6xl font-display font-bold mb-2">98<span class="text-3xl">%</span></div>
+                    <div class="text-sm font-medium uppercase tracking-wider">Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team -->
+    <section class="py-32 bg-brand-grey">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-20 gsap-reveal">
+                <span class="text-brand-orange font-display tracking-widest uppercase text-sm font-semibold mb-4 block">Professionals at Work</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-brand-black">Meet Our Team</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Team Member -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group gsap-reveal">
+                    <div class="h-80 overflow-hidden bg-gray-200 relative">
+                        <!-- Placeholder team image style -->
+                        <div class="absolute inset-0 bg-[url('media/step_visit_1782718280993.png')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-display font-bold text-brand-black mb-1">Ahmed Hassan</h4>
+                        <span class="text-brand-orange font-medium mb-4 block">Managing Director</span>
+                        <p class="text-gray-600 text-sm">Leading the strategic vision and ensuring uncompromised quality across all divisions.</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group gsap-reveal">
+                    <div class="h-80 overflow-hidden bg-gray-200 relative">
+                        <div class="absolute inset-0 bg-[url('media/step_planning_1782718293991.png')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-display font-bold text-brand-black mb-1">Sarah Jenkins</h4>
+                        <span class="text-brand-orange font-medium mb-4 block">Project Manager</span>
+                        <p class="text-gray-600 text-sm">Expert in orchestrating complex commercial fit-outs and coordinating multidisciplinary teams.</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group gsap-reveal">
+                    <div class="h-80 overflow-hidden bg-gray-200 relative">
+                        <div class="absolute inset-0 bg-[url('media/step_working_1782718338871.png')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-display font-bold text-brand-black mb-1">Tariq Rahman</h4>
+                        <span class="text-brand-orange font-medium mb-4 block">Site Engineer</span>
+                        <p class="text-gray-600 text-sm">Ensuring flawless execution and strict adherence to safety protocols on the ground.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-20 gsap-reveal">
+                <span class="text-brand-orange font-display tracking-widest uppercase text-sm font-semibold mb-4 block">Diverse Portfolio</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-brand-black">Industries We Serve</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Industry -->
+                <div class="h-48 rounded-lg overflow-hidden relative group gsap-scale">
+                    <div class="absolute inset-0 bg-brand-black/50 group-hover:bg-brand-orange/80 transition-colors duration-300 z-10"></div>
+                    <img src="media/Contemporary luxury villa with waterfront views.png" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Residential">
+                    <div class="relative z-20 h-full flex items-center justify-center p-4 text-center">
+                        <h4 class="text-white font-display font-bold text-xl">Residential</h4>
+                    </div>
+                </div>
+                <!-- Industry -->
+                <div class="h-48 rounded-lg overflow-hidden relative group gsap-scale">
+                    <div class="absolute inset-0 bg-brand-black/50 group-hover:bg-brand-orange/80 transition-colors duration-300 z-10"></div>
+                    <img src="media/Modern corporate lobby with city view.png" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Commercial">
+                    <div class="relative z-20 h-full flex items-center justify-center p-4 text-center">
+                        <h4 class="text-white font-display font-bold text-xl">Commercial</h4>
+                    </div>
+                </div>
+                <!-- Industry -->
+                <div class="h-48 rounded-lg overflow-hidden relative group gsap-scale">
+                    <div class="absolute inset-0 bg-brand-black/50 group-hover:bg-brand-orange/80 transition-colors duration-300 z-10"></div>
+                    <img src="media/bg_electrical_1782716326213.png" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Industrial">
+                    <div class="relative z-20 h-full flex items-center justify-center p-4 text-center">
+                        <h4 class="text-white font-display font-bold text-xl">Industrial</h4>
+                    </div>
+                </div>
+                <!-- Industry -->
+                <div class="h-48 rounded-lg overflow-hidden relative group gsap-scale">
+                    <div class="absolute inset-0 bg-brand-black/50 group-hover:bg-brand-orange/80 transition-colors duration-300 z-10"></div>
+                    <img src="media/Modern fine-dining with city views.png" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Hospitality">
+                    <div class="relative z-20 h-full flex items-center justify-center p-4 text-center">
+                        <h4 class="text-white font-display font-bold text-xl">Hospitality</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Expertise -->
+    <section class="py-32 bg-brand-black">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-20 gsap-reveal">
+                <span class="text-brand-orange font-display tracking-widest uppercase text-sm font-semibold mb-4 block">What We Do</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white">Our Expertise</h2>
+            </div>
+            
+            <div class="flex flex-col space-y-4">
+                <!-- Expertise Item -->
+                <a href="services.html" class="block group relative overflow-hidden rounded-xl h-40 md:h-48 gsap-reveal">
+                    <div class="absolute inset-0 bg-[url('media/bg_ac_1782716370637.png')] bg-cover bg-center group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-black/95 via-brand-black/80 to-transparent group-hover:from-brand-orange/95 group-hover:via-brand-orange/80 transition-colors duration-500"></div>
+                    <div class="relative z-10 h-full flex items-center px-10 md:px-20 justify-between">
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-display font-bold text-white mb-2">Painting & AC Works</h3>
+                            <p class="text-gray-300 group-hover:text-white transition-colors max-w-xl hidden md:block">Premium climate control and surface finishing solutions.</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white group-hover:bg-white group-hover:text-brand-orange transition-all">
+                            →
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Expertise Item -->
+                <a href="services.html" class="block group relative overflow-hidden rounded-xl h-40 md:h-48 gsap-reveal">
+                    <div class="absolute inset-0 bg-[url('media/bg_electrical_1782716326213.png')] bg-cover bg-center group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-black/95 via-brand-black/80 to-transparent group-hover:from-brand-orange/95 group-hover:via-brand-orange/80 transition-colors duration-500"></div>
+                    <div class="relative z-10 h-full flex items-center px-10 md:px-20 justify-between">
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-display font-bold text-white mb-2">Electrical & ELV Works</h3>
+                            <p class="text-gray-300 group-hover:text-white transition-colors max-w-xl hidden md:block">Advanced electrical engineering and low-voltage systems integration.</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white group-hover:bg-white group-hover:text-brand-orange transition-all">
+                            →
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Expertise Item -->
+                <a href="services.html" class="block group relative overflow-hidden rounded-xl h-40 md:h-48 gsap-reveal">
+                    <div class="absolute inset-0 bg-[url('media/bg_fitout_1782716432427.png')] bg-cover bg-center group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-black/95 via-brand-black/80 to-transparent group-hover:from-brand-orange/95 group-hover:via-brand-orange/80 transition-colors duration-500"></div>
+                    <div class="relative z-10 h-full flex items-center px-10 md:px-20 justify-between">
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-display font-bold text-white mb-2">Fit-Out & Carpentry</h3>
+                            <p class="text-gray-300 group-hover:text-white transition-colors max-w-xl hidden md:block">Luxury interior transformations and bespoke woodwork.</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white group-hover:bg-white group-hover:text-brand-orange transition-all">
+                            →
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Expertise Item -->
+                <a href="services.html" class="block group relative overflow-hidden rounded-xl h-40 md:h-48 gsap-reveal">
+                    <div class="absolute inset-0 bg-[url('media/bg_gypsum_1782716384460.png')] bg-cover bg-center group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-black/95 via-brand-black/80 to-transparent group-hover:from-brand-orange/95 group-hover:via-brand-orange/80 transition-colors duration-500"></div>
+                    <div class="relative z-10 h-full flex items-center px-10 md:px-20 justify-between">
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-display font-bold text-white mb-2">Flooring & General Maintenance</h3>
+                            <p class="text-gray-300 group-hover:text-white transition-colors max-w-xl hidden md:block">Comprehensive facility upkeep and premium surface installations.</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-white group-hover:bg-white group-hover:text-brand-orange transition-all">
+                            →
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work Process -->
+    <section class="py-32 bg-white relative">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-20 gsap-reveal">
+                <span class="text-brand-orange font-display tracking-widest uppercase text-sm font-semibold mb-4 block">How We Deliver Excellence</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-brand-black">Our Work Process</h2>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center relative gap-10 gsap-reveal">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-gray-100 -z-10 -translate-y-1/2"></div>
+                
+                <div class="flex flex-col items-center text-center group w-full md:w-1/6">
+                    <div class="w-16 h-16 rounded-full bg-white border-4 border-gray-100 flex items-center justify-center text-xl font-bold text-gray-400 group-hover:border-brand-orange group-hover:text-brand-orange transition-colors mb-4 shadow-sm z-10">1</div>
+                    <h4 class="font-display font-bold text-brand-black">Consultation</h4>
+                </div>
+                <div class="flex flex-col items-center text-center group w-full md:w-1/6">
+                    <div class="w-16 h-16 rounded-full bg-white border-4 border-gray-100 flex items-center justify-center text-xl font-bold text-gray-400 group-hover:border-brand-orange group-hover:text-brand-orange transition-colors mb-4 shadow-sm z-10">2</div>
+                    <h4 class="font-display font-bold text-brand-black">Planning</h4>
+                </div>
+                <div class="flex flex-col items-center text-center group w-full md:w-1/6">
+                    <div class="w-16 h-16 rounded-full bg-white border-4 border-gray-100 flex items-center justify-center text-xl font-bold text-gray-400 group-hover:border-brand-orange group-hover:text-brand-orange transition-colors mb-4 shadow-sm z-10">3</div>
+                    <h4 class="font-display font-bold text-brand-black">Design</h4>
+                </div>
+                <div class="flex flex-col items-center text-center group w-full md:w-1/6">
+                    <div class="w-16 h-16 rounded-full bg-white border-4 border-gray-100 flex items-center justify-center text-xl font-bold text-gray-400 group-hover:border-brand-orange group-hover:text-brand-orange transition-colors mb-4 shadow-sm z-10">4</div>
+                    <h4 class="font-display font-bold text-brand-black">Execution</h4>
+                </div>
+                <div class="flex flex-col items-center text-center group w-full md:w-1/6">
+                    <div class="w-16 h-16 rounded-full bg-white border-4 border-gray-100 flex items-center justify-center text-xl font-bold text-gray-400 group-hover:border-brand-orange group-hover:text-brand-orange transition-colors mb-4 shadow-sm z-10">5</div>
+                    <h4 class="font-display font-bold text-brand-black">Inspection</h4>
+                </div>
+                <div class="flex flex-col items-center text-center group w-full md:w-1/6">
+                    <div class="w-16 h-16 rounded-full bg-white border-4 border-brand-orange flex items-center justify-center text-xl font-bold text-brand-orange transition-colors mb-4 shadow-md z-10 shadow-brand-orange/20">6</div>
+                    <h4 class="font-display font-bold text-brand-black">Delivery</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Gallery Marquee -->
+    <section class="py-20 bg-brand-grey overflow-hidden border-t border-gray-200">
+        <div class="text-center mb-12 gsap-reveal">
+            <h2 class="text-4xl font-display font-bold text-brand-black">Company Gallery</h2>
+        </div>
+        <div class="marquee-container h-80">
+            <div class="marquee-content flex gap-6 px-3">
+                <img src="media/Contemporary luxury villa with waterfront views.png" class="h-80 w-[500px] object-cover rounded-xl shadow-lg" alt="Gallery">
+                <img src="media/Modern corporate lobby with city view.png" class="h-80 w-[500px] object-cover rounded-xl shadow-lg" alt="Gallery">
+                <img src="media/bg_electrical_1782716326213.png" class="h-80 w-[500px] object-cover rounded-xl shadow-lg" alt="Gallery">
+                <img src="media/Modern fine-dining with city views.png" class="h-80 w-[500px] object-cover rounded-xl shadow-lg" alt="Gallery">
+                <img src="media/bg_fitout_1782716432427.png" class="h-80 w-[500px] object-cover rounded-xl shadow-lg" alt="Gallery">
+                
+                <!-- Duplicate for infinite loop -->
+                <img src="media/Contemporary luxury villa with waterfront views.png" class="h-80 w-[500px] object-cover rounded-xl shadow-lg" alt="Gallery">
+                <img src="media/Modern corporate lobby with city view.png" class="h-80 w-[500px] object-cover rounded-xl shadow-lg" alt="Gallery">
+                <img src="media/bg_electrical_1782716326213.png" class="h-80 w-[500px] object-cover rounded-xl shadow-lg" alt="Gallery">
+                <img src="media/Modern fine-dining with city views.png" class="h-80 w-[500px] object-cover rounded-xl shadow-lg" alt="Gallery">
+                <img src="media/bg_fitout_1782716432427.png" class="h-80 w-[500px] object-cover rounded-xl shadow-lg" alt="Gallery">
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="py-24 bg-brand-grey border-t border-gray-200">
+        <div class="container mx-auto px-6 max-w-7xl text-center">
+            <h2 class="text-3xl font-display font-bold text-brand-black mb-12 gsap-reveal">Certifications & Safety</h2>
+            <div class="flex flex-wrap justify-center gap-10">
+                <div class="bg-white px-8 py-4 rounded-full shadow border border-gray-100 font-semibold text-gray-700 gsap-scale">ISO 9001 Certified</div>
+                <div class="bg-white px-8 py-4 rounded-full shadow border border-gray-100 font-semibold text-gray-700 gsap-scale delay-100">Government Approved</div>
+                <div class="bg-white px-8 py-4 rounded-full shadow border border-gray-100 font-semibold text-gray-700 gsap-scale delay-200">Licensed Contractors</div>
+                <div class="bg-white px-8 py-4 rounded-full shadow border border-gray-100 font-semibold text-gray-700 gsap-scale delay-300">Safety First Certified</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-32 bg-white relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-40 left-[20%] w-3 h-3 bg-brand-orange rounded-full gsap-scale"></div>
+        <div class="absolute top-36 left-[22%] w-8 h-8 border border-brand-orange rounded-full gsap-scale delay-100"></div>
+
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-20 gsap-reveal relative z-10">
+                <span class="text-brand-orange font-display tracking-widest uppercase text-sm font-semibold mb-4 block">Client Success Stories</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-brand-black">What Our Clients Say</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-10 rounded-2xl shadow-sm relative group hover:shadow-xl transition-all duration-300 gsap-scale">
+                    <div class="absolute -top-4 -right-4 text-8xl text-brand-orange/10 font-display leading-none group-hover:text-brand-orange/20 transition-colors">"</div>
+                    <div class="flex text-brand-orange mb-6 text-xl">★★★★★</div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8 relative z-10 italic">"Wadi Al Manar transformed our commercial space completely. Their attention to detail in the MEP works and the premium finish on the carpentry was beyond our expectations."</p>
+                    <div class="flex items-center gap-4 relative z-10 mt-auto">
+                        <div>
+                            <h4 class="font-display font-bold text-brand-black">Mohammed Al Fayed</h4>
+                            <span class="text-gray-500 text-sm">CEO, Skyline Enterprises</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-10 rounded-2xl shadow-sm relative group hover:shadow-xl transition-all duration-300 gsap-scale delay-100">
+                    <div class="absolute -top-4 -right-4 text-8xl text-brand-orange/10 font-display leading-none group-hover:text-brand-orange/20 transition-colors">"</div>
+                    <div class="flex text-brand-orange mb-6 text-xl">★★★★★</div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8 relative z-10 italic">"Their approach to our luxury villa renovation was exceptional. They handled the AC installation, custom flooring, and painting with remarkable precision. Delivered exactly on time."</p>
+                    <div class="flex items-center gap-4 relative z-10 mt-auto">
+                        <div>
+                            <h4 class="font-display font-bold text-brand-black">Sarah Williams</h4>
+                            <span class="text-gray-500 text-sm">Homeowner, Palm Jumeirah</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-10 rounded-2xl shadow-sm relative group hover:shadow-xl transition-all duration-300 gsap-scale delay-200">
+                    <div class="absolute -top-4 -right-4 text-8xl text-brand-orange/10 font-display leading-none group-hover:text-brand-orange/20 transition-colors">"</div>
+                    <div class="flex text-brand-orange mb-6 text-xl">★★★★★</div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8 relative z-10 italic">"The most reliable technical service company in Dubai. From emergency electrical repairs to complete retail fit-outs, Wadi Al Manar consistently delivers premium quality."</p>
+                    <div class="flex items-center gap-4 relative z-10 mt-auto">
+                        <div>
+                            <h4 class="font-display font-bold text-brand-black">Khalid Mansoor</h4>
+                            <span class="text-gray-500 text-sm">Director, Retail Horizons</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+
+    <!-- Call To Action -->
+    <section class="py-32 relative bg-brand-orange overflow-hidden text-center">
+        <div class="absolute inset-0 bg-[url('media/about_img.png')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
+        <div class="relative z-10 container mx-auto px-6 max-w-4xl">
+            <h2 class="text-5xl md:text-6xl font-display font-bold text-white mb-8 gsap-reveal">Let's Build Something Exceptional Together</h2>
+            <p class="text-xl text-white/90 mb-12 gsap-reveal delay-100">Ready to transform your vision into reality with unparalleled technical expertise?</p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center gsap-reveal delay-200">
+                <a href="contact.html" class="px-10 py-5 bg-brand-black text-white rounded font-semibold tracking-wide hover:bg-gray-900 transition-colors shadow-2xl">Request a Quote</a>
+                <a href="contact.html" class="px-10 py-5 bg-white text-brand-orange rounded font-semibold tracking-wide hover:bg-gray-50 transition-colors shadow-2xl">Contact Our Experts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Super Footer -->
+    <footer class="footer-premium">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="footer-grid">
+                <div class="f-brand">
+                    <img src="media/logo2 (2).png" alt="Wadi Al Manar Logo" class="f-logo" style="height: 70px;">
+                    <p>Engineering Better Spaces with Precision & Excellence. Premium technical services in Dubai.</p>
+                </div>
+                <div class="f-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="f-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Fit Out Works</a></li>
+                        <li><a href="services.html">MEP Services</a></li>
+                        <li><a href="services.html">General Maintenance</a></li>
+                        <li><a href="services.html">Civil Works</a></li>
+                    </ul>
+                </div>
+                <div class="f-newsletter">
+                    <h4 style="color: #F97316; margin-bottom: 1.5rem; font-size: 1.2rem;">Newsletter</h4>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Subscribe to get the latest news and updates.</p>
+                    <form style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                        <input type="email" placeholder="Your Email" style="padding: 0.8rem; flex: 1; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; border-radius: 4px;">
+                        <button type="button" style="background: #F97316; color: white; border: none; padding: 0 1.5rem; border-radius: 4px; cursor: pointer; font-weight: 600;">Subscribe</button>
+                    </form>
+                    <div class="f-contact-info" style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                        <p style="margin-bottom: 0.5rem;">📍 Bur Dubai - Al Fahidi - Dubai</p>
+                        <p style="margin-bottom: 0.5rem;">📞 +971 52 795 0408</p>
+                        <p>✉️ info@wadialmanar.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Wadi Al Manar Technical Services LLC. All rights reserved.</p>
+                <div class="social-links" style="display: flex; gap: 1rem; align-items: center;">
+                    <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.392-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"></path></svg></a>
+                    <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // GSAP Animations
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Initial Hero Animations
+            gsap.to(".gsap-hero", { y: 0, opacity: 1, duration: 1.5, stagger: 0.2, ease: "power4.out" });
+
+            // Scroll Reveal
+            gsap.utils.toArray('.gsap-reveal').forEach(elem => {
+                gsap.to(elem, {
+                    scrollTrigger: { trigger: elem, start: "top 85%" },
+                    y: 0, opacity: 1, duration: 1, ease: "power3.out"
+                });
+            });
+
+            // Scale Reveal
+            gsap.utils.toArray('.gsap-scale').forEach(elem => {
+                gsap.to(elem, {
+                    scrollTrigger: { trigger: elem, start: "top 85%" },
+                    scale: 1, opacity: 1, duration: 1, ease: "back.out(1.7)"
+                });
+            });
+
+            // Parallax
+            gsap.utils.toArray('.parallax-bg').forEach(bg => {
+                gsap.to(bg, {
+                    yPercent: 30,
+                    ease: "none",
+                    scrollTrigger: { trigger: bg.parentElement, start: "top bottom", end: "bottom top", scrub: true }
+                });
+            });
+            
+            // Custom Cursor
+            const cursor = document.querySelector('.cursor');
+            const follower = document.querySelector('.cursor-follower');
+            if(cursor && follower) {
+                document.addEventListener('mousemove', (e) => {
+                    gsap.to(cursor, {x: e.clientX, y: e.clientY, duration: 0});
+                    gsap.to(follower, {x: e.clientX, y: e.clientY, duration: 0.15});
+                });
+            }
+            
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
