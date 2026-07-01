@@ -91,33 +91,58 @@ h1, h2, h3, h4, h5, h6 {
 .premium-nav {
     position: absolute;
     top: 0; left: 0; width: 100%;
-    padding: 1.5rem 5%;
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+    background: transparent;
+}
+.premium-nav .logo img {
+    height: 90px !important;
+    width: auto;
 }
 .premium-nav .nav-links a {
-    color: var(--primary);
+    color: #e5e7eb;
     text-decoration: none;
-    margin: 0 1.5rem;
-    font-weight: 500;
-    font-size: 0.95rem;
+    margin: 0 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
     position: relative;
     transition: var(--transition);
 }
 .premium-nav .nav-links a::after {
     content: '';
     position: absolute;
-    bottom: -5px; left: 0;
+    bottom: -6px; left: 0;
     width: 0%; height: 2px;
     background: var(--accent);
     transition: var(--transition);
 }
+.premium-nav .nav-links a:hover {
+    color: var(--accent);
+}
+.premium-nav .nav-links a.active {
+    color: var(--primary);
+}
 .premium-nav .nav-links a:hover::after,
 .premium-nav .nav-links a.active::after {
     width: 100%;
+}
+
+.premium-nav .btn-magnetic {
+    background: #F97316 !important;
+    color: white !important;
+    padding: 0.75rem 1.75rem !important;
+    border-radius: 0.5rem !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    border: 2px solid #F97316 !important;
+    backdrop-filter: none;
+}
+.premium-nav .btn-magnetic:hover {
+    background: #EA580C !important;
+    border-color: #EA580C !important;
 }
 
 /* Buttons */
@@ -183,10 +208,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero */
 .hero-premium {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
+    padding: 6rem 0 4rem 0;
 }
 .hero-bg-slider {
     position: absolute;
@@ -212,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     z-index: 3;
     padding: 0 5%;
-    margin-top: 8rem;
+    margin-top: 4rem;
     max-width: 1200px;
 }
 .hero-content-wrapper h1 {
@@ -231,7 +257,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-stats {
     display: flex;
     gap: 2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 .glass-stat {
     background: var(--glass-bg);
