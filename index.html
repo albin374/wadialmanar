@@ -402,34 +402,161 @@
         </div>
     </section>
 
-    <!-- Testimonials Slider -->
-    <section class="testimonials-premium padding-y bg-neutral">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="subtitle accent-text">Testimonials</span>
-                <h2>What Our Clients Say</h2>
+    <!-- Testimonials Slider (Project Style) -->
+    <style>
+        .trust-testimonials {
+            background-color: #F8F9FA; /* light gray bg similar to bg-background */
+            padding: 5rem 0;
+            overflow: hidden;
+        }
+        .trust-testimonials .container-flex {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        .tt-left {
+            width: 33.333%;
+        }
+        .tt-left h2 {
+            font-size: 2.5rem;
+            color: #111;
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+        }
+        .tt-left p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .tt-nav {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .tt-nav button {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #111;
+        }
+        .tt-nav button:hover {
+            background: #F97316;
+            color: white;
+            border-color: #F97316;
+        }
+        .tt-right {
+            width: 66.666%;
+            display: flex;
+            gap: 2rem;
+        }
+        .tt-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            width: 350px;
+            flex: 0 0 350px;
+            transition: all 0.3s ease;
+        }
+        .tt-card.active {
+            border-left: 4px solid #F97316;
+            opacity: 1;
+        }
+        .tt-card.inactive {
+            opacity: 0.4;
+        }
+        .tt-stars {
+            color: #FFB693; /* light orange for stars */
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        .tt-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .tt-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .tt-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #E4E2E1;
+        }
+        .tt-name {
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 0.2rem 0;
+            font-size: 1rem;
+        }
+        .tt-title {
+            font-size: 0.75rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+        }
+        @media (max-width: 992px) {
+            .trust-testimonials .container-flex {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .tt-left, .tt-right {
+                width: 100%;
+            }
+            .tt-right {
+                overflow-x: auto;
+                padding-bottom: 1rem;
+            }
+        }
+    </style>
+    <section class="trust-testimonials">
+        <div class="container-flex">
+            <div class="tt-left">
+                <h2>Built on Trust</h2>
+                <p>What our partners say about the Wadi Al Manar technical edge.</p>
+                <div class="tt-nav">
+                    <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></button>
+                    <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
             </div>
-            
-            <div class="testimonial-slider">
-                <div class="testimonial-card glassmorphism">
-                    <div class="quote-mark">"</div>
-                    <p class="t-text">Wadi Al Manar transformed our commercial space completely. Their attention to detail in the MEP and fit-out works was phenomenal. Highly recommended for premium projects.</p>
-                    <div class="t-author">
-                        <img src="media/WAM LOGO-02.png" alt="Client">
+            <div class="tt-right">
+                <div class="tt-card active">
+                    <div class="tt-stars">★★★★★</div>
+                    <p class="tt-quote">"Their technical precision is unmatched in Dubai. Every joint, every wire, and every stroke was handled with architectural care."</p>
+                    <div class="tt-author">
+                        <div class="tt-avatar"></div>
                         <div>
-                            <h5>Ahmed Al Maktoum</h5>
-                            <span>Property Developer</span>
+                            <p class="tt-name">Marcus Thorne</p>
+                            <p class="tt-title">CEO, VERTEX DEVELOPMENTS</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card glassmorphism">
-                    <div class="quote-mark">"</div>
-                    <p class="t-text">The level of professionalism displayed by their electrical and HVAC teams was outstanding. Delivered exactly on time with zero compromises on quality.</p>
-                    <div class="t-author">
-                        <img src="media/WAM LOGO-02.png" alt="Client">
+                <div class="tt-card inactive">
+                    <div class="tt-stars">★★★★★</div>
+                    <p class="tt-quote">"On-time delivery even under extreme pressure. Wadi Al Manar is our go-to for complex retail fit-outs."</p>
+                    <div class="tt-author">
+                        <div class="tt-avatar"></div>
                         <div>
-                            <h5>Sarah Jenkins</h5>
-                            <span>Operations Manager</span>
+                            <p class="tt-name">Sarah Al-Maktoum</p>
+                            <p class="tt-title">LUXE RETAIL GROUP</p>
                         </div>
                     </div>
                 </div>
@@ -505,12 +632,7 @@
                     </ul>
                 </div>
                 <div class="f-newsletter">
-                    <h4 style="color: #F97316; margin-bottom: 1.5rem; font-size: 1.2rem;">Newsletter</h4>
-                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Subscribe to get the latest news and updates.</p>
-                    <form style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
-                        <input type="email" placeholder="Your Email" style="padding: 0.8rem; flex: 1; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; border-radius: 4px;">
-                        <button type="button" style="background: #F97316; color: white; border: none; padding: 0 1.5rem; border-radius: 4px; cursor: pointer; font-weight: 600;">Subscribe</button>
-                    </form>
+                    <h4 style="color: #F97316; margin-bottom: 1.5rem; font-size: 1.2rem;">Contact Us</h4>
                     <div class="f-contact-info" style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
                         <p style="margin-bottom: 0.5rem;">📍 Bur Dubai - Al Fahidi - Dubai</p>
                         <p style="margin-bottom: 0.5rem;">📞 +971 52 795 0408</p>
