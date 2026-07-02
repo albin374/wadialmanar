@@ -23,15 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Dropdown Toggle
     const dropdowns = document.querySelectorAll('.nav-dropdown');
     dropdowns.forEach(dropdown => {
-        const link = dropdown.querySelector('a');
-        if (link) {
-            link.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
-                    // Prevent navigation on first tap to open menu
-                    if (!dropdown.classList.contains('open')) {
-                        e.preventDefault();
-                        dropdown.classList.add('open');
-                    }
+        const toggleBtn = dropdown.querySelector('.mobile-toggle');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdown.classList.toggle('open');
+                if (dropdown.classList.contains('open')) {
+                    toggleBtn.textContent = '-';
+                } else {
+                    toggleBtn.textContent = '+';
                 }
             });
         }

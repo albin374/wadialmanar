@@ -152,6 +152,9 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     padding: 10px 0;
 }
+.mobile-toggle {
+    display: none;
+}
 
 .dropdown-content {
     display: none;
@@ -655,8 +658,12 @@ h1, h2, h3, h4, h5, h6 {
     .premium-nav .nav-links { 
         display: flex; flex-direction: column; 
         position: absolute; top: 100%; left: 0; width: 100%; 
+        height: 100vh;
+        overflow-y: auto;
+        padding-bottom: 6rem;
         background-color: var(--secondary); 
-        padding: 2rem; gap: 1.5rem; text-align: center;
+        padding-top: 2rem;
+        gap: 1.5rem; text-align: center;
         transform: translateY(-150%);
         opacity: 0;
         transition: 0.4s ease;
@@ -668,15 +675,27 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 1;
         pointer-events: all;
     }
-    .nav-dropdown > a::after {
-        content: '+';
-        display: inline-block;
-        margin-left: 10px;
-        font-weight: bold;
-        font-size: 1.2rem;
+    .premium-nav.solid-bg-nav ~ div:first-of-type {
+        padding-top: 100px;
     }
-    .nav-dropdown.open > a::after {
-        content: '-';
+    .mobile-toggle {
+        display: inline-block;
+        position: absolute;
+        left: 100%;
+        top: 8px;
+        transform: none;
+        margin-left: 5px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0 10px;
+        color: #e5e7eb;
+    }
+    .mobile-toggle:hover {
+        color: #F97316;
+    }
+    .nav-dropdown > a {
+        display: inline-block;
     }
     .nav-dropdown .dropdown-content {
         position: static;
