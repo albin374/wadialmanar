@@ -692,14 +692,16 @@ h1, h2, h3, h4, h5, h6 {
         pointer-events: all;
     }
     .premium-nav .nav-links a {
-        font-size: 1.3rem; /* Increased for mobile visibility */
-        margin: 0.2rem 0;
+        font-size: 1.6rem; /* Increased size */
+        margin: 0.3rem 0;
+        vertical-align: middle;
     }
     .premium-nav.solid-bg-nav ~ div:first-of-type {
         padding-top: 100px;
     }
     .mobile-toggle {
         display: inline-block;
+        vertical-align: middle;
         position: relative;
         left: auto;
         top: auto;
@@ -710,12 +712,14 @@ h1, h2, h3, h4, h5, h6 {
         cursor: pointer;
         padding: 0 10px;
         color: #e5e7eb;
+        line-height: 1;
     }
     .mobile-toggle:hover {
         color: #F97316;
     }
     .nav-dropdown > a {
         display: inline-block;
+        vertical-align: middle;
     }
     .nav-dropdown .dropdown-content {
         position: static;
@@ -723,7 +727,7 @@ h1, h2, h3, h4, h5, h6 {
         box-shadow: none;
         border: none;
         display: none;
-        margin-top: 10px;
+        margin-top: 15px;
         padding-left: 0;
     }
     .nav-dropdown.open .dropdown-content {
@@ -731,6 +735,12 @@ h1, h2, h3, h4, h5, h6 {
         animation: navSlideDown 0.3s ease forwards;
     }
     .dropdown-content a {
-        padding: 10px 0;
+        padding: 12px 20px;
+        font-size: 1.3rem; /* slightly smaller than main links */
+        display: block;
+        white-space: normal;
+        line-height: 1.4;
+        max-width: 300px;
+        margin: 0 auto;
     }
 }
