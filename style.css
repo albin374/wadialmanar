@@ -171,9 +171,11 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid rgba(255,255,255,0.05);
 }
 
-.nav-dropdown:hover .dropdown-content {
-    display: block;
-    animation: dropdownFadeIn 0.2s ease-out forwards;
+@media (min-width: 769px) {
+    .nav-dropdown:hover .dropdown-content {
+        display: block;
+        animation: dropdownFadeIn 0.2s ease-out forwards;
+    }
 }
 
 @keyframes dropdownFadeIn {
