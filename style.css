@@ -173,7 +173,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-dropdown:hover .dropdown-content {
     display: block;
-    animation: navSlideDown 0.3s ease forwards;
+    animation: dropdownFadeIn 0.2s ease-out forwards;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .dropdown-content a {
