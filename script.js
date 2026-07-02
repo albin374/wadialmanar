@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.stopPropagation();
                 dropdown.classList.toggle('open');
                 if (dropdown.classList.contains('open')) {
-                    toggleBtn.textContent = '-';
+                    toggleBtn.textContent = '▲';
                 } else {
-                    toggleBtn.textContent = '+';
+                    toggleBtn.textContent = '▼';
                 }
             });
         }
