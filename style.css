@@ -730,10 +730,12 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
         padding: 0;
     }
-    .nav-dropdown > a {
+    .premium-nav .nav-links .nav-dropdown > a {
         display: block;
         padding: 1.2rem 2rem;
         text-align: left;
+        font-size: 1.2rem;
+        margin: 0;
     }
     .premium-nav.solid-bg-nav ~ div:first-of-type {
         padding-top: 100px;
@@ -769,7 +771,7 @@ h1, h2, h3, h4, h5, h6 {
         display: block !important;
         animation: none;
     }
-    .dropdown-content a {
+    .premium-nav .nav-links .dropdown-content a {
         padding: 1rem 2rem 1rem 3rem;
         font-size: 1.1rem;
         display: block;
@@ -779,7 +781,7 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0;
         border-bottom: 1px solid rgba(255,255,255,0.05);
     }
-    .dropdown-content a:last-child {
+    .premium-nav .nav-links .dropdown-content a:last-child {
         border-bottom: none;
     }
 }
